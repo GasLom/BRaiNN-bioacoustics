@@ -3,8 +3,7 @@ First-of-its-kind AI model for bioacoustic detection using a lightweight associa
 
 ## Requirements:
 
-matplotlib==3.10.3
-
+matplotlib==3.10.3  
 numpy==2.3.2
 
 pandas==2.3.1
