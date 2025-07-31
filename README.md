@@ -17,7 +17,7 @@ The dataset used to develop the model introduced in Ecological Informatics (cita
 
 For the simplest execution put the remaining 10,384 wav files in a folder named ‘DATA’ in the same location as the contents of the code zip file. Remember to remove the two files currently in stored_sounds or you will end up with 10,386 wav files. Set up empty folders in the same location: PIPI’, ‘PIPY’, ‘SILENCE’, ‘UNID’, ‘UNCLASS’. To classify the data run BRaiN.py. Run the BRaiN_analyse_plot.py once the main classification code (BRaiN.py) has run. Before a re-run, return files to the DATA folder using BRaiN_fileshifter.py. Double check your folders are empty and DATA contains the full dataset before running again. N.B. Faster runtimes can be achieved in a terminal and without shifting files, however the runtimes reported in the paper include the time taken to move files before analysis.
 
-To analyse/classify longer files or for different species do get in touch with the authors and they will be happy to advise on later iterations of the code. They are currently working with captive and wild primate datasets.  
+To analyse/classify longer files or for different species do get in touch with the developers and they will be happy to advise on later iterations of the code. They are currently working with captive and wild primate datasets.  
 
 ## Acknowledgements:
 
