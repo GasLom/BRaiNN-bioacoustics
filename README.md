@@ -1,6 +1,6 @@
 <div align="center">
   <h1>BRaiN_bioacoustics</h1>
-       <img src="https://github.com/GasLom/BRaiN_bioacoustics/blob/main/BRaiN.png?raw=true" width="200" alt=“BRaiN-Logo" />
+       <img src="https://github.com/GasLom/BRaiN_bioacoustics/blob/main/BRaiN3.png?raw=true" width="250" alt=“BRaiN-Logo" />
     </a>
 </div>
 <br>
