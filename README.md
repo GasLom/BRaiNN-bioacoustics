@@ -6,9 +6,9 @@
 <br>
 <div align="center">
 
-</div>
-
 First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network (bioacoustic recognition AI network).
+
+</div>
 
 ## Requirements:
 
