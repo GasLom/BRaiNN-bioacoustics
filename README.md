@@ -21,5 +21,5 @@ To analyse/classify longer files or for different species get in touch with the 
 
 ## Acknowledgements:
 
-The authors would like to thank the [OpenBright Foundation](https://openbright.org.uk/) and trustee Elizabeth Molyneux for their support and funding. We also thank the University of Wolverhampton for the Invest to Grow PhD Studentship funding. Finally, thanks go to Catherine Povey (Just Mammals Ltd) for her expertise and useful discussions.  
+The authors would like to thank the [OpenBright Foundation](https://openbright.org.uk/) and trustee Elizabeth Molyneux for their support and funding. We also thank the [University of Wolverhampton](https://www.wlv.ac.uk/) for the Invest to Grow PhD Studentship funding. Finally, thanks go to Catherine Povey ([Just Mammals Ltd](https://www.justmammals.co.uk/)) for her expertise and useful discussions.  
 
