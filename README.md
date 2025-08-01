@@ -24,8 +24,8 @@ scipy==1.16.1
 
 The dataset used to develop the model introduced in Ecological Informatics (citation pending) is available [here](https://zenodo.org/records/3247097). To replicate the results of this paper, download the dataset and follow the instructions within the paper and the labelling on Zenodo to remove the short silence files, i.e. remove all wav files from the downloaded SILENCES folder that DO NOT start with S-. For the simplest execution:
 
-* Place the remaining 10,384 wav files in a folder named `DATA’ in the same location as the contents of the code zip file. Remember to remove the two files currently in stored_sounds or you will end up with 10,386 wav files.
-* Set up five empty folders in the same location: `PIPI’, `PIPY’, `SILENCE’, `UNID’, and `UNCLASS’.
+* Place the remaining 10,384 wav files in a folder named 'DATA’ in the same location as the contents of the code zip file. Remember to remove the two files currently in stored_sounds or you will end up with 10,386 wav files.
+* Set up five empty folders in the same location: 'PIPI’, 'PIPY’, 'SILENCE’, 'UNID’, and 'UNCLASS’.
 * To classify the raw data run BRaiN.py
 * To examine the results run BRaiN_analyse_plot.py once the main classification code (BRaiN.py) has run.
 * Before a re-run, return files to the DATA folder using BRaiN_fileshifter.py. Double check your folders are empty and DATA contains the full dataset (10,384 wav files) before running again.
