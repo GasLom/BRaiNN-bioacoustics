@@ -10,8 +10,6 @@ import scipy.io.wavfile as wavfile
 from scipy.fft import fft, fftfreq
 from scipy.signal import find_peaks
 
-#import sys, os, os.path
-#from os import sys
 import shutil
 import glob
 import re
