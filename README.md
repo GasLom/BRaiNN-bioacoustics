@@ -1,12 +1,12 @@
 <div align="center">
   <h1>BRaiN_bioacoustics</h1>
-       <img src="https://github.com/GasLom/BRaiN_bioacoustics/blob/main/BRaiN.png?raw=true" width="300" alt=“BRaiN-Logo" />
+       <img src="https://github.com/GasLom/BRaiNN_bioacoustics/blob/main/BRaiN.png?raw=true" width="300" alt=“BRaiN-Logo" />
     </a>
 </div>
 <br>
 <div align="center">
 
-First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network (Bioacoustic Recognition AI Network).
+First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network (Bioacoustic Recognition AI Neural Network).
 
 </div>
 
