@@ -34,7 +34,10 @@ def power_spec(wav, threshold):
     return tf2, yf2, tf3, yf3, peaks, maxval
 
 
-#########################################################################
+#############################################################
+##Full Power Spectral Density Plots 
+##Compares cases of misclassifed signals (see Fig 5 in paper)
+#############################################################
 
 wav_list = ['stored_sounds/PIPI_20160607_223337-002_1304_5_1_6_B_.wav',
     'stored_sounds/PIPY_20160607_221032-007_138_5_1_2_B_.wav']
@@ -52,11 +55,6 @@ wav_input = ['typical_misclass/PIPY_20160820_222844-010_681_5_1_6_B_.wav',
 
 bins=np.arange((min_f),(max_f+1), step=binwidth)
 bins=np.around(bins, decimals=2, out=None)
-
-#############################################################
-##Full Power Spectral Density Plots 
-##Compares cases of misclassifed signals (see Fig 5 in paper)
-#############################################################
 
 fig, ax = plt.subplots(2,2, figsize=(14,9))  
 
