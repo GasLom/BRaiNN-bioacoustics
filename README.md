@@ -6,7 +6,21 @@
 <br>
 <div align="center">
 
-First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network (Bioacoustic Recognition AI Neural Network).
+The **B**ioacoustic **R**ecognition AI **N**eural **N**etwork (BRaiNN) team is made up of a group of researchers at the [University of Wolverhampton](https://www.wlv.ac.uk/) lead by [Dr Andrew Gascoyne](https://researchers.wlv.ac.uk/A.D.Gascoyne) and [Wendy Lomas](https://researchers.wlv.ac.uk/W.Lomas) who develop AI models for bioacoustic analysis. This repository provides the bioacoustic recognition system to detect common and soprano pipistrelles using a lightweight associative memory Hopfield neural network. 
+
+Feel free to use the software for your acoustic analyses and research. If you do, please cite as:
+
+```bibtex
+@article{GasLom2025BRaiNN,
+  title={First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network},
+  author={Gascoyne, Andrew and Lomas, Wendy},
+  journal={Ecological Informatics},
+  volume={},
+  pages={},
+  year={2025},
+  publisher={Elsevier}
+}
+```
 
 </div>
 
