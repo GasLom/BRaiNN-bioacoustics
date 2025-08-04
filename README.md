@@ -6,7 +6,7 @@
 <br>
 <div align="center">
 
-The **B**ioacoustic **R**ecognition AI **N**eural **N**etwork (BRaiNN) team is made up of a group of researchers at the [University of Wolverhampton](https://www.wlv.ac.uk/) lead by [Dr Andrew Gascoyne](https://researchers.wlv.ac.uk/A.D.Gascoyne) and [Wendy Lomas](https://researchers.wlv.ac.uk/W.Lomas) who develop AI models for bioacoustic analysis. This repository provides the bioacoustic recognition system to detect common and soprano pipistrelles using a lightweight associative memory Hopfield neural network. 
+The **B**ioacoustic **R**ecognition AI **N**eural **N**etwork (BRaiNN) team is made up of a group of researchers, at the [University of Wolverhampton](https://www.wlv.ac.uk/) lead by [Dr Andrew Gascoyne](https://researchers.wlv.ac.uk/A.D.Gascoyne) and [Wendy Lomas](https://researchers.wlv.ac.uk/W.Lomas), developing AI models for bioacoustic analysis. This repository provides the software to detect common and soprano pipistrelles using a lightweight associative memory Hopfield neural network. 
 
 Feel free to use the software for your acoustic analyses and research. If you do, please cite as:
 
@@ -36,7 +36,9 @@ scipy==1.16.1
 
 ## Instructions:
 
-The dataset used to develop the model introduced in Ecological Informatics (citation pending) is available on [Zenodo](https://zenodo.org/records/3247097). To replicate the results of this paper, download the dataset and follow the instructions within the paper and the labelling on Zenodo to remove the short silence files, i.e. remove all wav files from the downloaded SILENCES folder that DO NOT start with S-. For the simplest execution:
+The dataset used to develop the model is available on [Zenodo](https://zenodo.org/records/3247097). To replicate the results of this paper (citation pending), download the dataset and follow the instructions within the paper and the labelling on Zenodo to remove the short silence files, i.e. remove all wav files from the downloaded SILENCES folder that DO NOT start with S-. 
+
+For the simplest execution:
 
 * Place the remaining 10,384 wav files in a folder named 'DATA’ in the same location as the contents of the code zip file. Remember to remove the two files currently in stored_sounds or you will end up with 10,386 wav files.
 * Set up five empty folders in the same location: 'PIPI’, 'PIPY’, 'SILENCE’, 'UNID’, and 'UNCLASS’.
