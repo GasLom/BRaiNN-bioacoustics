@@ -168,8 +168,8 @@ def power_spec(wav_list, threshold):
 
 def energy(W,x):        
     E=0
-    for i in range(N):
-        for j in range(N):
+    for i in range(len(x)):
+        for j in range(len(x)):
             if j != i:
                 E += -1/2*W[i,j]*x[i]*x[j]        
     return E
@@ -234,10 +234,10 @@ for i in range(row_count):
     W += p*p.T-np.identity(N)
 
 end_time_train = datetime.now()
-print('Training:')
-print('Time elapsed:', end_time_train - start_time, 'hours:minutes:seconds')
 cpu_usage = resource.getrusage(resource.RUSAGE_SELF).ru_utime
 memory_usage = process.memory_info().rss  # in bytes 
+print('Training:')
+print('Time elapsed:', end_time_train - start_time, 'hours:minutes:seconds')
 print(f"CPU Time Usage: {cpu_usage} seconds") 
 print(f"Memory Usage: {memory_usage / (1024 ** 2):.2f} MB")
 
@@ -260,17 +260,12 @@ for wav in wav_input:
 peaks_f_input = sounds_processor2(wav_input, threshold, min_f, max_f)
 
 ##Process and Classify without SILENCES and UNCLASSIFIABLES for Model 2
-
 wav_input = glob.glob("DATA/*.wav")
 new_num_files = len(wav_input)
-print(new_num_files)
-#sys.exit()
 pi_count_new = 0
 py_count_new = 0
 s_count_new = 0
-
-for wav in wav_input:
-    
+for wav in wav_input:    
     pi_count_new, py_count_new, s_count_new = count(wav, pi_count_new, py_count_new, s_count_new)
 
 peaks_f_input = sounds_processor2(wav_input, threshold, min_f, max_f)
@@ -278,37 +273,29 @@ peaks_f_input = sounds_processor2(wav_input, threshold, min_f, max_f)
 n_signals = len(wav_input)
 input_signal = neuron_firing(n_signals, peaks_f_input, freqrange)
 x = np.asmatrix(input_signal)
-
 x = x.T
 
-# To examine energy of each initial input
+##To examine initial energy:
+#print('Initial')
+#print(x.T)
 #print('Energy:')
 #print(energy(W,x))
-
+#print(energy2(W,x))
 
 z = np.zeros(N)
-
-
 for k in range(4):
     z = np.dot(W, x)
-
     x = np.sign(z)
-    # To examine energy after each iteration...
+    ##To examine energy after each iteration:
     #print('Updated {}'.format(k+1))
     #print(x.T)
     #print('Energy:')
     #print(energy(W,x))
     #print(energy2(W,x))
 
-#print(x)
-
-
-##Sort files by Species
+##Sort files by species
 pipi = neurons.iloc[0,:].values
-print(pipi)
 pipy = neurons.iloc[1,:].values
-print(pipy)
-
 
 count_pi_in_pi = 0
 count_py_in_pi = 0
@@ -321,10 +308,9 @@ count_py_in_un = 0
 count_s_in_un = 0
 
 
-####################################################
-### Compare final state of network to stored signals
-### Comment out the moving of files if not required.
-####################################################
+##################################################
+##Compare final state of network to stored signals
+##################################################
 
 
 for i, wav in zip(range(n_signals), wav_input):
@@ -340,21 +326,11 @@ for i, wav in zip(range(n_signals), wav_input):
         count_pi_in_un, count_py_in_un, count_s_in_un = count(wav, count_pi_in_un, count_py_in_un, count_s_in_un)
         shutil.move(wav, "UNID")
 
-
-
-print('\nNo. of PIPI = ', pipi_count, '  No. of PIPY = ', pipy_count, 
-      ' No. of SILENCES = ', s_count)
-print('No. of input files = ', num_files)
-
-
-print('\nNew no. of PIPI = ', pi_count_new, 'New No. of PIPY = ', py_count_new,
-      'New No. of SILENCES = ', s_count_new)
-print('New no. of input files = ', new_num_files)
+print('Support = ', new_num_files)
+print('\nPIPI Support = ', pi_count_new, 'PIPY SUPPORT = ', py_count_new)
 
 print('\nPi in Pi = ', count_pi_in_pi, '  Pi in Py = ', count_pi_in_py, '  Pi in Un = ', count_pi_in_un)
 print(  'Py in Pi = ', count_py_in_pi, '   Py in Py = ', count_py_in_py, '  Py in Un = ', count_py_in_un)
-print(' S in Pi = ', count_s_in_pi, '      S in Py = ', count_s_in_py, '      S in Un = ', count_s_in_un)
-
 
 pi_precision = count_pi_in_pi/(count_pi_in_pi + count_py_in_pi + count_s_in_pi)
 pi_recall = count_pi_in_pi/(count_pi_in_pi + count_pi_in_py + count_pi_in_un)
@@ -362,27 +338,19 @@ pi_recall = count_pi_in_pi/(count_pi_in_pi + count_pi_in_py + count_pi_in_un)
 py_precision = count_py_in_py/(count_py_in_py + count_pi_in_py + count_s_in_pi)
 py_recall = count_py_in_py/(count_py_in_py + count_py_in_pi + count_py_in_un)
 
-
 F1_pi = 2 * ((pi_precision*pi_recall)/(pi_precision+pi_recall))
 F1_py = 2 * ((py_precision*py_recall)/(py_precision+py_recall))
 
-print('\nPIPI recall = ', round(pi_recall, 2), '  precision = ', round(pi_precision, 2),
+print('\nPIPI precision = ', round(pi_precision, 2), '  recall = ', round(pi_recall, 2),
       '  F1 = ', round(F1_pi, 2))
-print('PIPY recall = ', round(py_recall, 2), '  precision = ', round(py_precision, 2),
+print('PIPY precision = ', round(py_precision, 2), '  recall = ', round(py_recall, 2),
       '  F1 = ', round(F1_py, 2))
 
-print(f'Number of stored sounds = {row_count}.', f'  Number of neurons = {N}.')
-
-
 end_time = datetime.now()
-
-# Measure CPU and memory usage 
 cpu_usage = resource.getrusage(resource.RUSAGE_SELF).ru_utime
 memory_usage = process.memory_info().rss  # in bytes 
-
-print(f"CPU Time Used: {cpu_usage} seconds") 
-print(f"Memory Used: {memory_usage / (1024 ** 2):.2f} MB")  # Convert bytes to MB 
-print('Train time:', end_time_train - start_time)
+print('Full Execution (Training and Classification)')
 print('Execution time:', end_time - start_time)
-
+print(f"CPU Time Usage: {cpu_usage} seconds") 
+print(f"Memory Usage: {memory_usage / (1024 ** 2):.2f} MB")  # Convert bytes to MB 
 
