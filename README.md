@@ -47,7 +47,7 @@ For the simplest execution:
 * Before a re-run, return files to the DATA folder using BRaiNN_fileshifter.py. Double check your folders are empty and DATA contains the full dataset (10,384 wav files) before running again.
 -->
 
-To analyse/classify longer files or for different species do get in touch with the developers and they will be happy to advise on later iterations of the code. They are currently working with captive and wild primate datasets.  
+To analyse/classify longer files or for different species do get in touch with the team and they will be happy to advise on later iterations of the software. They are currently working with captive and wild primate datasets.  
 
 ## Acknowledgements:
 
