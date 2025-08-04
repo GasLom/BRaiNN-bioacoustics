@@ -39,7 +39,12 @@ The dataset used to develop the model is available on [Zenodo](https://zenodo.or
 For the simplest execution:
 
 * Place the remaining 10,384 wav files in a folder named 'DATA’ in the same location as the contents of the code zip file. Remember to remove the two files currently in stored_sounds or you will end up with 10,386 wav files.
-* Set up five empty folders in the same location: 'PIPI’, 'PIPY’, 'SILENCE’, 'UNID’, and 'UNCLASS’.
+* Set up five empty classification folders in the same location: 'PIPI’, 'PIPY’, 'SILENCE’, 'UNID’, and 'UNCLASS’.
+  * PIPI: common pipistrelle
+  * PIPY: soprano pipistrelle
+  * SILENCE: pre-processed silences
+  * UNID: unidentified, i.e. model converges to a spurious state
+  * UNCLASS: pre-processed unclassifiable files; files of echolocation pulses with FmaxE between 49 and 51 kHz removed (Russ, 2021; Aughney et al., 2018; Catto et al., 2003)
 * To classify the raw data run BRaiNN.py
 * To examine the results run BRaiNN_analyse_plot.py once the main classification code (BRaiNN.py) has run.
 * N.B. The fastest runtimes can be achieved in a command-line interface and without shifting files, however the runtimes reported in the paper include the time taken to move files before analysis.
