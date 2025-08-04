@@ -54,6 +54,13 @@ For the simplest execution:
 
 To analyse/classify longer files or for different species do get in touch with the team and they will be happy to advise on later iterations of the software. We are currently working with captive and wild primate datasets.  
 
+## References:
+
+Aughney, T., Roche, N., Langton, S., 2018. The Irish Bat Monitoring Programme 2015-2017. Irish Wildlife Manuals, No. 103, National Parks and Wildlife Service. Department of Culture, Heritage and the Gaeltacht, Ireland.
+Catto, C., Coyte, A., Agate, J., Langton, S., 2003. Bats as Indicators of Environmental Quality R&D Technical Report E1-129/TR. Technical Report ISBN: 1 844 32251 3. Environment Agency. Rio House, Waterside Drive, Aztec West, Almondsbury Bristol BS32 4UD. N.B. This document was produced under R&D Project E1-129 by the Bat Conservation Trust.
+Russ, J., 2021. Bat calls of Britain and Europe. Bat Biology and Conservation, Pelagic Publishing, Exeter, England.
+
+
 ## Acknowledgements:
 
 The authors would like to thank the [OpenBright Foundation](https://openbright.org.uk/) and trustee Elizabeth Molyneux for their support and funding, and the [University of Wolverhampton](https://www.wlv.ac.uk/) for the Invest to Grow PhD Studentship funding. Finally, thanks also go to Catherine Povey ([Just Mammals Ltd](https://www.justmammals.co.uk/)) for her expertise and useful discussions.  
