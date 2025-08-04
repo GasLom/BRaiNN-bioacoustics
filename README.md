@@ -44,7 +44,7 @@ For the simplest execution:
   * PIPY: soprano pipistrelle
   * SILENCE: pre-processed silences
   * UNID: unidentified, i.e. model converges to a spurious state
-  * UNCLASS: pre-processed unclassifiable files; files of echolocation pulses with FmaxE between 49 and 51 kHz removed (Russ, 2021; Aughney et al., 2018; Catto et al., 2003)
+  * UNCLASS: pre-processed unclassifiable files of echolocation pulses with FmaxE between 49 and 51 kHz (Russ, 2021; Aughney et al., 2018; Catto et al., 2003)
 * To classify the raw data run BRaiNN.py
 * To examine the results run BRaiNN_analyse_plot.py once the main classification code (BRaiNN.py) has run.
 * N.B. The fastest runtimes can be achieved in a command-line interface and without shifting files, however the runtimes reported in the paper include the time taken to move files before analysis.
