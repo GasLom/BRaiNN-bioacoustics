@@ -31,22 +31,17 @@ def sounds_processor2(wav_list, threshold, min_f, max_f):
     count = 0
     for wav in wav_list:
         s_rate, signal = wavfile.read(wav)
-
         N = len(signal)  # Number of sample points
         T = 1.0 / s_rate # Sample period 
-      
         yf = fft(signal)
         tf = fftfreq(N, T)
-
         yf2 = np.abs(yf[0:N//2])**2 # power
         tf2 = tf[0:N//2]*1.e-3   # kHz
-        
         
         maxval_s = max(yf2)
         TH_s = threshold*maxval_s
         peaks_s, _ = find_peaks(yf2, height=TH_s)
         peaks_f_values = tf2[peaks_s]
-        
         
         peaks_f_values = np.delete(peaks_f_values, np.where(peaks_f_values < min_f))
         peaks_f_values = np.delete(peaks_f_values, np.where(peaks_f_values > max_f))
@@ -56,29 +51,22 @@ def sounds_processor2(wav_list, threshold, min_f, max_f):
         
         if (peaks_f_values).size == 0:
             shutil.move(wav, "SILENCE")
-            #print('Silences Found!!!')
             continue
-        
         
         peaks_inrange = np.where((tf2 > min_f) & (tf2 < max_f))
 
         yf3 = yf2[peaks_inrange]
         tf3 = tf2[peaks_inrange]
-        peaks, _ = find_peaks(yf3, height=0)
-               
+        peaks, _ = find_peaks(yf3, height=0)               
         maxval = max(yf3[peaks], default=0)
-        
         TH = threshold*maxval
-        
         peaks, _ = find_peaks(yf3, height=TH)
-        
         peaks_f_values = tf3[peaks]
-        
         
         peaks_f_values = np.delete(peaks_f_values, np.where(peaks_f_values < min_f))
         peaks_f_values = np.delete(peaks_f_values, np.where(peaks_f_values > max_f))
         
-        ### Remove unclassifiable signals
+        ### Remove unclassifiable signals (Comment out this if statement for Model 1 results)
         
         if len(peaks) > 0:
             max_peak = peaks[np.argmax(yf3[peaks])]
@@ -87,14 +75,10 @@ def sounds_processor2(wav_list, threshold, min_f, max_f):
                 shutil.move(wav, "UNCLASS")
                 continue 
         
-        
-        peaks_f.append(peaks_f_values)
-        
+        peaks_f.append(peaks_f_values)        
         ID_in = np.zeros((len(peaks_f_values)))+count
         ID.append(ID_in)        
-        count += 1
-        
-        
+        count += 1    
         
     cat = np.array([np.concatenate((peaks_f))]).T
     ID = np.array([np.concatenate((ID))]).T
@@ -103,18 +87,12 @@ def sounds_processor2(wav_list, threshold, min_f, max_f):
 
 
 def neuron_firing(n_signals, peaks_f, freqrange):
-    
     neurons = np.zeros((n_signals, len(freqrange)))-1
 
     for j in range(n_signals):
-        
         peaks_f1 = peaks_f[peaks_f[:,0] == j, 1]
-        
-        #print(peaks_f1)
-    
         index = np.zeros(len(peaks_f1))
-
-        #find the neurons which are on:
+        
         for i in range(len(peaks_f1)):
             dist = np.abs(freqrange-peaks_f1[i])
             index[i] = dist.argmin()
@@ -125,23 +103,15 @@ def neuron_firing(n_signals, peaks_f, freqrange):
     return neurons
 
 
-
-def network_model(peaks_f):
-    
+def network_model(peaks_f):    
     lf = 45
     hf = 60
-    
     binwidth = 0.9
-
     freqrange = np.arange(lf,hf+binwidth,binwidth)
-    
     maxID = int(max(peaks_f[:,0]))
-    
     neurons = neuron_firing(maxID+1, peaks_f, freqrange)
        
     return neurons, binwidth, lf, hf
-
-
 
 
 def power_spec(wav_list, threshold):
@@ -160,15 +130,10 @@ def power_spec(wav_list, threshold):
             wavname = "Soprano (PIPY)"
             
         s_rate, signal = wavfile.read(wav)
-
-        # Number of sample points
         N = len(signal)
-        # Sample period
-        T = 1.0 / s_rate
-      
+        T = 1.0 / s_rate     
         yf = fft(signal)
         tf = fftfreq(N, T)
-
         yf2 = np.abs(yf[0:N//2])**2
         tf2 = tf[0:N//2]*1.e-3
         
@@ -179,32 +144,25 @@ def power_spec(wav_list, threshold):
         peaks, _ = find_peaks(yf3, height=0)
         
         maxval = max(yf3[peaks])
-        
         TH = threshold*maxval
-        
         peaks, _ = find_peaks(yf3, height=TH)
-
 
         bins=np.arange((lf),(hf+1), step=binwidth)
         bins=np.around(bins, decimals=2, out=None)
 
         ax.plot(tf2,yf2/maxval, label=wavname) #relative power vs frequency
         ax.plot(tf3[peaks], yf3[peaks]/maxval, 'x', color='black')
-        
         ax.set_xlim(lf,hf)
         ax.set_ylim(-0.1,1.1)
         ax.set_xticks(bins)
         ax.set_xticklabels(bins, rotation=45)
         ax.grid(axis = 'x', color = '0.80')
-
         ax.set_xlabel('Frequency (kHz)')
-        ax.set_ylabel('Relative Power')
-               
+        ax.set_ylabel('Relative Power')           
 
     ax.legend()
     fig.tight_layout(pad=0.1)
     fig.savefig('HNN_stored_sounds.png', dpi=600)
-        
     return
 
 
@@ -213,9 +171,9 @@ def energy(W,x):
     for i in range(N):
         for j in range(N):
             if j != i:
-                E += -1/2*W[i,j]*x[i]*x[j]
-        
+                E += -1/2*W[i,j]*x[i]*x[j]        
     return E
+
 
 # More efficient but identical energy calculation
 def energy2(W,x):
@@ -237,8 +195,6 @@ def count(wav, count1, count2, count3):
     return count1, count2, count3
 
 
-
-
 #################################################################
 #Hopfield Network Model - Storing signals into the network memory
 #################################################################
@@ -247,23 +203,12 @@ def count(wav, count1, count2, count3):
 
 wav_list = glob.glob("stored_sounds/*.wav")
 
-
 threshold = 0.1
 min_f = 45
 max_f = 60
 peaks_f = sounds_processor2(wav_list, threshold, min_f, max_f)
-
-#print(peaks_f, '\n')
-
-
-
-
 neurons, binwidth, lf, hf = network_model(peaks_f)
-
-#print(neurons)
-
 freqrange = np.arange(lf,hf+binwidth,binwidth)
-
 
 ##Index neurons by species file label
 neurons = pd.DataFrame(neurons)
@@ -277,66 +222,44 @@ neurons.index = labels
 neurons.columns = [x for x in freqrange]
 pd.set_option('display.max_columns', None)
 
-print(neurons)
-
-
-# Include to produce power spectrum
-#power_spec(wav_list, threshold)
-#sys.exit()
-
-
 sf = neurons.iloc[:,:].values
-
 N = len(sf[0])
 sf = np.asmatrix(sf)
 row_count = len(sf)
 
 W = np.zeros((N,N))
-    
-
 for i in range(row_count):    
     p = sf[i]
     p = p.reshape(N,1)
     W += p*p.T-np.identity(N)
 
-
 end_time_train = datetime.now()
-print('Train time:', end_time_train - start_time)
+print('Training:')
+print('Time elapsed:', end_time_train - start_time, 'hours:minutes:seconds')
 cpu_usage = resource.getrusage(resource.RUSAGE_SELF).ru_utime
 memory_usage = process.memory_info().rss  # in bytes 
-print(f"CPU Time Used: {cpu_usage} seconds") 
-print(f"Memory Used: {memory_usage / (1024 ** 2):.2f} MB")
-#sys.exit()
+print(f"CPU Time Usage: {cpu_usage} seconds") 
+print(f"Memory Usage: {memory_usage / (1024 ** 2):.2f} MB")
 
 
+#####################################################     
+##Identifying/Classifying Signals and Model Metrics
+#####################################################
 
-###################################     
-##  Identifying/Classifying Signals
-###################################
-
-##REMOVE SILENCES and UNCLASSIFIABLE (50kHz signals - Jon Russ book pg 336)
-
+##Firstly identify and remove SILENCES and UNCLASSIFIABLES for Model 2
 wav_input = glob.glob("DATA/*.wav")
 num_files = len(wav_input)
-print(num_files)
 
 input_total = len(wav_input)
 pipi_count = 0
 pipy_count = 0
 s_count = 0
-for wav in wav_input:
-          
+for wav in wav_input:         
     pipi_count, pipy_count, s_count = count(wav, pipi_count, pipy_count, s_count)    
 
+peaks_f_input = sounds_processor2(wav_input, threshold, min_f, max_f)
 
-input_threshold = 0.1
-input_min_f = 45
-input_max_f = 60
-peaks_f_input = sounds_processor2(wav_input, input_threshold, input_min_f, 
-    input_max_f)
-
-
-### Process/Classify (without silences etc)
+##Process and Classify without SILENCES and UNCLASSIFIABLES for Model 2
 
 wav_input = glob.glob("DATA/*.wav")
 new_num_files = len(wav_input)
@@ -350,14 +273,7 @@ for wav in wav_input:
     
     pi_count_new, py_count_new, s_count_new = count(wav, pi_count_new, py_count_new, s_count_new)
 
-
-input_threshold = 0.1
-input_min_f = 45
-input_max_f = 60
-peaks_f_input = sounds_processor2(wav_input, input_threshold, input_min_f, 
-                                  input_max_f)
-
-
+peaks_f_input = sounds_processor2(wav_input, threshold, min_f, max_f)
 
 n_signals = len(wav_input)
 input_signal = neuron_firing(n_signals, peaks_f_input, freqrange)
