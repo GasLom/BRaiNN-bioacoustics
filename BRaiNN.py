@@ -324,8 +324,8 @@ for i, wav in zip(range(n_signals), wav_input):
         count_pi_in_un, count_py_in_un, count_s_in_un = count(wav, count_pi_in_un, count_py_in_un, count_s_in_un)
         shutil.move(wav, "UNID")
 
-print('Support = ', new_num_files)
-print('\nPIPI Support = ', pi_count_new, 'PIPY SUPPORT = ', py_count_new)
+print('\nSupport = ', new_num_files)
+print('PIPI Support = ', pi_count_new, 'PIPY SUPPORT = ', py_count_new)
 
 print('\nPi in Pi = ', count_pi_in_pi, '  Pi in Py = ', count_pi_in_py, '  Pi in Un = ', count_pi_in_un)
 print(  'Py in Pi = ', count_py_in_pi, '   Py in Py = ', count_py_in_py, '  Py in Un = ', count_py_in_un)
@@ -347,7 +347,7 @@ print('PIPY precision = ', round(py_precision, 2), '  recall = ', round(py_recal
 end_time = datetime.now()
 cpu_usage = resource.getrusage(resource.RUSAGE_SELF).ru_utime
 memory_usage = process.memory_info().rss  # in bytes 
-print('Full Execution (Training and Classification)')
+print('\nFull Execution (Training and Classification)')
 print('Execution time:', end_time - start_time)
 print(f"CPU Time Usage: {cpu_usage} seconds") 
 print(f"Memory Usage: {memory_usage / (1024 ** 2):.2f} MB")  # Convert bytes to MB 
