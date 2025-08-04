@@ -1,5 +1,5 @@
 ##################################################
-#BRaiN_bioacoustics EI 2025. Analyse/Plot Results.
+#BRaiNN_bioacoustics EI 2025. Analyse/Plot Results.
 ##################################################
 
 
