@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>BRaiNN_bioacoustics</h1>
+  <h1>BRaiNN-bioacoustics</h1>
        <img src="https://github.com/GasLom/BRaiN_bioacoustics/blob/main/BRaiNN.png?raw=true" width="300" alt=“BRaiNN-Logo" />
     </a>
 </div>
