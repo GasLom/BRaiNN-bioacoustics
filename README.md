@@ -34,7 +34,7 @@ scipy==1.16.1
 
 ## Instructions:
 
-The dataset used to develop the model is available on [Zenodo](https://zenodo.org/records/3247097). To replicate the results of this paper (citation pending), download the Zenodo dataset, paying careful attention to the filename syntax, and follow the instructions within the paper. It is important to remove all wav files from the downloaded SILENCES folder with filenames that DO NOT begin with S-, otherwise this will over inflate the model performance metrics, see paper for details.
+The dataset us\`ed to develop the model is available on [Zenodo](https://zenodo.org/records/3247097). To replicate the results of this paper (citation pending), download the Zenodo dataset, paying careful attention to the filename syntax, and follow the instructions within the paper. It is important to remove all wav files from the downloaded SILENCES folder with filenames that DO NOT begin with S-, otherwise this will over inflate the model performance metrics, see paper for details.
 
 For the simplest execution:
 
