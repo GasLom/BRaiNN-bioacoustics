@@ -123,7 +123,7 @@ To analyse/classify longer files or for different species do get in touch with t
 
 Aughney, T., Roche, N., Langton, S., 2018. The Irish Bat Monitoring Programme 2015-2017. Irish Wildlife Manuals, No. 103, National Parks and Wildlife Service. Department of Culture, Heritage and the Gaeltacht, Ireland.
 
-Bertran, M., Alsina-Pag\`es, R., Tena, E., 2019. Pipistrellus pipistrellus and pipistrellus pygmaeus in the iberian peninsula: An annotated segmented dataset and a proof of concept of a classifier in a real environment. Applied Sciences 9. doi:10.3390/app9173467.
+Bertran, M., Alsina-Pages, R., Tena, E., 2019. Pipistrellus pipistrellus and pipistrellus pygmaeus in the iberian peninsula: An annotated segmented dataset and a proof of concept of a classifier in a real environment. Applied Sciences 9. doi:10.3390/app9173467.
 
 Catto, C., Coyte, A., Agate, J., Langton, S., 2003. Bats as Indicators of Environmental Quality R&D Technical Report E1-129/TR. Technical Report ISBN: 1 844 32251 3. Environment Agency. Rio House, Waterside Drive, Aztec West, Almondsbury Bristol BS32 4UD. N.B. This document was produced under R&D Project E1-129 by the Bat Conservation Trust.
 
