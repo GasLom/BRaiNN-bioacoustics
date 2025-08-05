@@ -16,8 +16,8 @@ Feel free to use the software for your acoustic analyses and research. If you do
   title={First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network},
   author={Gascoyne, Andrew and Lomas, Wendy},
   journal={Ecological Informatics},
-  volume={pending},
-  pages={pending},
+  volume={},
+  pages={},
   year={2025},
   publisher={Elsevier}
 }
@@ -84,8 +84,8 @@ Feel free to use the software for your acoustic analyses and research. If you do
   title={First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network},
   author={Gascoyne, Andrew and Lomas, Wendy},
   journal={Ecological Informatics},
-  volume={},
-  pages={},
+  volume={pending},
+  pages={pending},
   year={2025},
   publisher={Elsevier}
 }
