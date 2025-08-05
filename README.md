@@ -49,9 +49,6 @@ For the simplest execution:
 * To classify the raw data run BRaiNN.py
 * To examine the results run BRaiNN_analyse_plot.py once the main classification code (BRaiNN.py) has run.
 * N.B. The fastest runtimes can be achieved in a command-line interface and without shifting files, however the runtimes reported in the paper include the time taken to move files before analysis.
-<!-- 
-* Before a re-run, return files to the DATA folder using BRaiNN_fileshifter.py. Double check your folders are empty and DATA contains the full dataset (10,384 wav files) before running again.
--->
 
 To analyse/classify longer files or for different species do get in touch with the team and they will be happy to advise on later iterations of the software. We are currently working with captive and wild primate datasets.  
 
