@@ -15,8 +15,8 @@ Feel free to use the software for your acoustic analyses and research. If you do
   title={First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network},
   author={Gascoyne, Andrew and Lomas, Wendy},
   journal={Ecological Informatics},
-  volume={pending},
-  pages={pending},
+  volume={91},
+  pages={103382},
   year={2025},
   publisher={Elsevier}
 }
@@ -34,9 +34,9 @@ scipy==1.16.1
 
 ## Instructions:
 
-To replicate the results of this paper (citation pending) follow these instructions for the simplest execution:
+To replicate the results of this paper (Gascoyne and Lomas, 2025) follow these instructions for the simplest execution:
 
-* Create an empty folder, 'DATA' and then unzip all the dataset files (see citation pending and Bertran et al, 2019). Move all the wav files from PIPI_paper, PIPY_paper, SILENCE_paper and SILENCE2_paper to the DATA folder.
+* Create an empty folder, 'DATA' and then unzip all the dataset files (Gascoyne and Lomas, 2025; Bertran et al, 2019). Move all the wav files from PIPI_paper, PIPY_paper, SILENCE_paper and SILENCE2_paper to the DATA folder.
 * Set up five empty classification folders in the same location: 'PIPI’, 'PIPY’, 'SILENCE’, 'UNID’, and 'UNCLASS’.
   * PIPI: common pipistrelle
   * PIPY: soprano pipistrelle
@@ -58,7 +58,7 @@ Bertran, M., Alsina-Pages, R., Tena, E., 2019. Pipistrellus pipistrellus and pip
 
 Catto, C., Coyte, A., Agate, J., Langton, S., 2003. Bats as Indicators of Environmental Quality R&D Technical Report E1-129/TR. Technical Report ISBN: 1 844 32251 3. Environment Agency. Rio House, Waterside Drive, Aztec West, Almondsbury Bristol BS32 4UD. N.B. This document was produced under R&D Project E1-129 by the Bat Conservation Trust.
 
-Gascoyne, A., Lomas, W., 2025. First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network. Ecological Informatics (Submitted).
+Gascoyne, A., Lomas, W., 2025. First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network. Ecological Informatics, vol. 91, pp 103382, (2025). doi.org/10.1016/j.ecoinf.2025.103382.
 
 Russ, J., 2021. Bat calls of Britain and Europe. Bat Biology and Conservation, Pelagic Publishing, Exeter, England.
 
