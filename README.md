@@ -6,7 +6,7 @@
 <br>
 
 
-The **B**ioacoustic **R**ecognition AI **N**eural **N**etwork (BRaiNN) team is made up of a group of researchers at the [University of Wolverhampton](https://www.wlv.ac.uk/), led by [Andrew Gascoyne](https://researchers.wlv.ac.uk/A.D.Gascoyne) and [Wendy Lomas](https://researchers.wlv.ac.uk/W.Lomas), developing lightweight AI models for bioacoustic analysis. This repository provides the software to detect common and soprano pipistrelles using a lightweight associative memory Hopfield neural network. 
+The **B**ioacoustic **R**ecognition AI **N**eural **N**etwork (BRaiNN) team is made up of a group of researchers at the [University of Wolverhampton](https://www.wlv.ac.uk/) led by [Andrew Gascoyne](https://researchers.wlv.ac.uk/A.D.Gascoyne) and [Wendy Lomas](https://researchers.wlv.ac.uk/W.Lomas). The team is developing lightweight AI models for bioacoustic analysis. This repository provides the software to detect common and soprano pipistrelles using a lightweight associative memory Hopfield neural network. 
 
 Feel free to use the software for your acoustic analyses and research. If you do, please cite as:
 
