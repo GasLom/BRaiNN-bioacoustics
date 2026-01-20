@@ -68,7 +68,7 @@ For the simplest execution:
 
 ### Lomas et al. (2025) *currently being updated
 
-In this paper two models were developed. Model 1 was trained on two representative black and white ruffed lemur calls characterised as an alarm call and a grumble (located in folder 'lemur_calls'. Model 2 was also trained on these calls and an additional signal representative of noise made by the lemurs as the moved around their apparatus near the recorder, see 'lemur_calls_noise'. To train and classify using model 1 run BRaiNN_lemur_1.py, and to train and classify using model 2 run BRaiNN_lemur_2.py. 
+In this paper two models were developed. Model 1 was trained on two representative black and white ruffed lemur calls characterised as an alarm call and a grumble (located in folder 'lemur_calls'). Model 2 was also trained on these calls and an additional signal representative of noise made by the lemurs as the moved around their apparatus near the recorder, see 'lemur_calls_noise'. To train and classify using model 1 run BRaiNN_lemur_1.py, and to train and classify using model 2 run BRaiNN_lemur_2.py. 
 
 N.B. You will have to provide signals to be classified via the code instructions. We would also recommend using your own noise signal for model 2, representative of sounds you wish to filter out. Please see the paper for more details. The full dataset used in this research for evaluation is currently unavailable here as we were not the only curators, but we hope to update this in the future.
 
