@@ -86,7 +86,7 @@ Bertran, M., Alsina-Pages, R., Tena, E., 2019. Pipistrellus pipistrellus and pip
 
 Catto, C., Coyte, A., Agate, J., Langton, S., 2003. Bats as Indicators of Environmental Quality R&D Technical Report E1-129/TR. Technical Report ISBN: 1 844 32251 3. Environment Agency. Rio House, Waterside Drive, Aztec West, Almondsbury Bristol BS32 4UD. N.B. This document was produced under R&D Project E1-129 by the Bat Conservation Trust.
 
-Gascoyne, A., Lomas, W., 2025. First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network. Ecological Informatics, vol. 91, pp 103382, (2025). doi.org/10.1016/j.ecoinf.2025.103382.
+Gascoyne, A., Lomas, W., 2025. First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network. Ecological Informatics, vol. 91, pp 103382, (2025). https://doi.org/10.1016/j.ecoinf.2025.103382.
 
 Lomas, W., Gascoyne, A., Dubreuil, C., Vaglio, S., Naughton, L. (2025). Lightweight Hopfield Neural Networks for Bioacoustic Detection and Call Monitoring of Captive Primates. In: Arai, K. (eds) Proceedings of the Future Technologies Conference (FTC) 2025, Volume 1. FTC 2025. Lecture Notes in Networks and Systems, vol 1675. Springer, Cham. https://doi.org/10.1007/978-3-032-07986-2_38
 
