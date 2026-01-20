@@ -75,8 +75,7 @@ N.B. You will have to provide signals to be classified via the code instructions
 &nbsp;
 &nbsp;
 
-
-To analyse/classify longer files or for different species do get in touch with the team and they will be happy to advise on later iterations of the software. We are currently working with captive and wild primate datasets.  
+To analyse/classify files from different species or with different parameters do get in touch with the team and they will be happy to advise on later iterations of the software. We are currently working with captive and wild primate and bat datasets.  
 
 
 ## References:
@@ -89,10 +88,12 @@ Catto, C., Coyte, A., Agate, J., Langton, S., 2003. Bats as Indicators of Enviro
 
 Gascoyne, A., Lomas, W., 2025. First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network. Ecological Informatics, vol. 91, pp 103382, (2025). doi.org/10.1016/j.ecoinf.2025.103382.
 
+Lomas, W., Gascoyne, A., Dubreuil, C., Vaglio, S., Naughton, L. (2025). Lightweight Hopfield Neural Networks for Bioacoustic Detection and Call Monitoring of Captive Primates. In: Arai, K. (eds) Proceedings of the Future Technologies Conference (FTC) 2025, Volume 1. FTC 2025. Lecture Notes in Networks and Systems, vol 1675. Springer, Cham. https://doi.org/10.1007/978-3-032-07986-2_38
+
 Russ, J., 2021. Bat calls of Britain and Europe. Bat Biology and Conservation, Pelagic Publishing, Exeter, England.
 
 
 ## Acknowledgements:
 
-The authors would like to thank the [OpenBright Foundation](https://openbright.org.uk/) and trustee Elizabeth Molyneux for their support and funding, and the [University of Wolverhampton](https://www.wlv.ac.uk/) for the Invest to Grow PhD Studentship funding. Finally, thanks also go to Catherine Povey ([Just Mammals Ltd](https://www.justmammals.co.uk/)) for her expertise and useful discussions.  
+The authors would like to thank the [OpenBright Foundation](https://openbright.org.uk/) and trustee Elizabeth Molyneux for their support and funding, and the [University of Wolverhampton](https://www.wlv.ac.uk/) for the Invest to Grow PhD Studentship funding. We would also like to thank staff at Dudley Zoo and Castle (UK) for their expert insight and assistance, and Jessica Gwilliams for data collection. Finally, thanks also go to Catherine Povey ([Just Mammals Ltd](https://www.justmammals.co.uk/)) for her expertise and useful discussions.  
 
