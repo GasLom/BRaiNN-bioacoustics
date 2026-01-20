@@ -6,9 +6,9 @@
 <br>
 
 
-The **B**ioacoustic **R**ecognition AI **N**eural **N**etwork (BRaiNN) team is made up of a group of researchers at the [University of Wolverhampton](https://www.wlv.ac.uk/) led by [Andrew Gascoyne](https://researchers.wlv.ac.uk/A.D.Gascoyne) and [Wendy Lomas](https://researchers.wlv.ac.uk/W.Lomas). The team is developing lightweight AI models for bioacoustic analysis. This repository provides the software to detect a variety of species specific call types and will be updated as the research progresses. Currently we have models to predict common and soprano pipistrelles as well as black and white ruffed lemurs using lightweight associative memory Hopfield neural networks. Feel free to use the software for your acoustic analyses and research. If you do, please cite as:
+The **B**ioacoustic **R**ecognition AI **N**eural **N**etwork (BRaiNN) team is made up of a group of researchers at the [University of Wolverhampton](https://www.wlv.ac.uk/) led by [Andrew Gascoyne](https://researchers.wlv.ac.uk/A.D.Gascoyne) and [Wendy Lomas](https://researchers.wlv.ac.uk/W.Lomas). The team is developing lightweight AI models for bioacoustic analysis. This repository provides the software to detect a variety of species specific call types and will be updated as the research progresses. Currently we have models to predict common and soprano pipistrelles as well as black and white ruffed lemurs using lightweight associative memory Hopfield neural networks. Feel free to use the software for your acoustic analyses and research. If you do, please use the appropriate citations below.
 
-For the original model used to detect two bat species:
+For the original model, which was used to detect two bat species, use:
 ```bibtex
 @article{GasLom2025BRaiNN,
   title={First-of-its-kind AI model for bioacoustic detection using a lightweight associative memory Hopfield neural network},
@@ -21,7 +21,7 @@ For the original model used to detect two bat species:
 }
 ```
 
-For the model used to detect lemur call types:
+For the model used to detect lemur call types, please use:
 ```bibtex
 @InProceedings{LomGDVN2025BRaiNN,
   title={Lightweight Hopfield Neural Networks for Bioacoustic Detection and Call Monitoring of Captive Primates},
@@ -48,7 +48,9 @@ scipy==1.16.1
 
 ## Instructions:
 
-To replicate the results of this paper (Gascoyne and Lomas, 2025) follow these instructions for the simplest execution:
+# Bat Paper
+
+To replicate the results in Gascoyne and Lomas (2025) follow these instructions for the simplest execution:
 
 * Create an empty folder, 'DATA' and then unzip all the dataset files (Gascoyne and Lomas, 2025; Bertran et al, 2019). Move all the wav files from PIPI_paper, PIPY_paper, SILENCE_paper and SILENCE2_paper to the DATA folder.
 * Set up five empty classification folders in the same location: 'PIPI’, 'PIPY’, 'SILENCE’, 'UNID’, and 'UNCLASS’.
