@@ -72,7 +72,8 @@ In this paper two models were developed. Model 1 was trained on two representati
 
 N.B. You will have to provide signals to be classified via the code instructions. We would also recommend using your own noise signal for model 2, representative of sounds you wish to filter out. Please see the paper for more details. The full dataset used in this research for evaluation is currently unavailable here as we were not the only curators, but we hope to update this in the future.
 
-
+&nbsp;
+&nbsp;
 
 
 To analyse/classify longer files or for different species do get in touch with the team and they will be happy to advise on later iterations of the software. We are currently working with captive and wild primate datasets.  
