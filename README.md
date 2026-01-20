@@ -48,11 +48,13 @@ scipy==1.16.1
 
 ## Instructions:
 
-# Bat Paper
+To replicate the results in Gascoyne and Lomas (2025) and Lomas et al. (2025) follow the instructions below.
 
-To replicate the results in Gascoyne and Lomas (2025) follow these instructions for the simplest execution:
+### Gascoyne and Lomas (2025)
 
-* Create an empty folder, 'DATA' and then unzip all the dataset files (Gascoyne and Lomas, 2025; Bertran et al, 2019). Move all the wav files from PIPI_paper, PIPY_paper, SILENCE_paper and SILENCE2_paper to the DATA folder.
+For the simplest execution:
+
+* Create an empty folder, 'DATA' and then unzip all the dataset files (Gascoyne and Lomas, 2025; Bertran et al, 2019). Move all the wav files from 'PIPI_paper', 'PIPY_paper', 'SILENCE_paper' and 'SILENCE2_paper' to the 'DATA' folder.
 * Set up five empty classification folders in the same location: 'PIPI’, 'PIPY’, 'SILENCE’, 'UNID’, and 'UNCLASS’.
   * PIPI: common pipistrelle
   * PIPY: soprano pipistrelle
@@ -62,6 +64,14 @@ To replicate the results in Gascoyne and Lomas (2025) follow these instructions 
 * To classify the raw data run BRaiNN.py
 * To examine the results run BRaiNN_analyse_plot.py once the main classification code (BRaiNN.py) has run.
 * N.B. The fastest runtimes can be achieved in a command-line interface and without shifting files, however the runtimes reported in the paper include the time taken to move files before analysis.
+
+
+### Lomas et al. (2025)
+
+In this paper two models were developed. Model 1 was trained on two representative black and white ruffed lemur calls characterised as an alarm call and a grumble (located in folder 'lemur_calls'. Model 2 was also trained on these calls and an additional signal representative of noise made by the lemurs as the moved around their apparatus near the recorder, see 'lemur_calls_noise'. To train and classify using model 1 run BRaiNN_lemur_1.py, and to train and classify using model 2 run BRaiNN_lemur_2.py. 
+
+N.B. You will have to provide signals to be classified via the code instructions. We would also recommend using your own noise signal for model 2, representative of sounds you wish to filter out. Please see the paper for more details. The full dataset used in this research for evaluation is currently unavailable here as we were not the only curators, but we hope to update this in the future.
+
 
 To analyse/classify longer files or for different species do get in touch with the team and they will be happy to advise on later iterations of the software. We are currently working with captive and wild primate datasets.  
 
