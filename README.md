@@ -66,7 +66,7 @@ For the simplest execution:
 * N.B. The fastest runtimes can be achieved in a command-line interface and without shifting files, however the runtimes reported in the paper include the time taken to move files before analysis.
 
 
-### Lomas et al. (2025) *currently being updated
+### Lomas et al. (2025)
 
 In this paper two models were developed. Model 1 was trained on two representative black and white ruffed lemur calls characterised as an alarm call and a grumble (located in folder 'lemur_calls'). Model 2 was also trained on these calls and an additional signal representative of noise made by the lemurs as the moved around their apparatus near the recorder, see 'lemur_calls_noise'. To train and classify using model 1 run BRaiNN_lemur_1.py, and to train and classify using model 2 run BRaiNN_lemur_2.py. 
 
