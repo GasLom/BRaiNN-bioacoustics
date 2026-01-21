@@ -80,10 +80,15 @@ To analyse/classify files from different species or with different parameters do
 ## The Team at the University of Wolverhampton:
 
 Andrew Gascoyne, School of Engineering, Computing and Mathematical Sciences (a.d.gascoyne@wlv.ac.uk).
+
 Wendy Lomas, School of Engineering, Computing and Mathematical Sciences (w.k.lomas@wlv.ac.uk)
+
 Colin Dubreuil, School of Pharmacy and Life Sciences (c.dubreuil@wlv.ac.uk)
+
 Stefano Vaglio, School of Pharmacy and Life Sciences (s.vaglio@wlv.ac.uk)
+
 Liam Naughton, School of Engineering, Computing and Mathematical Sciences (l.naughton@wlv.ac.uk)
+
 
 ## References:
 
