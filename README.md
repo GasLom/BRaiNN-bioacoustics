@@ -79,15 +79,15 @@ N.B. You will have to provide signals to be classified via the code instructions
 
 To analyse/classify files from different species or with different parameters do get in touch with the team and they will be happy to advise on later iterations of the software and data collection. We are currently working with captive and wild primate and bat datasets.  
 
-Andrew Gascoyne, School of Engineering, Computing and Mathematical Sciences (a.d.gascoyne@wlv.ac.uk).
+[Andrew Gascoyne](https://researchers.wlv.ac.uk/A.D.Gascoyne), School of Engineering, Computing and Mathematical Sciences (a.d.gascoyne@wlv.ac.uk).
 
-Wendy Lomas, School of Engineering, Computing and Mathematical Sciences (w.k.lomas@wlv.ac.uk)
+[Wendy Lomas](https://researchers.wlv.ac.uk/W.Lomas), School of Engineering, Computing and Mathematical Sciences (w.k.lomas@wlv.ac.uk)
 
-Colin Dubreuil, School of Pharmacy and Life Sciences (c.dubreuil@wlv.ac.uk)
+[Colin Dubreuil](https://researchers.wlv.ac.uk/C.Dubreuil), School of Pharmacy and Life Sciences (c.dubreuil@wlv.ac.uk)
 
-Stefano Vaglio, School of Pharmacy and Life Sciences (s.vaglio@wlv.ac.uk)
+[Stefano Vaglio](https://researchers.wlv.ac.uk/s.vaglio), School of Pharmacy and Life Sciences (s.vaglio@wlv.ac.uk)
 
-Liam Naughton, School of Engineering, Computing and Mathematical Sciences (l.naughton@wlv.ac.uk)
+[Liam Naughton](https://www.wlv.ac.uk/about-us/our-staff/liam-naughton/), School of Engineering, Computing and Mathematical Sciences (l.naughton@wlv.ac.uk)
 
 
 ## References:
