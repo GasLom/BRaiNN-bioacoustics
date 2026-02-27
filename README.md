@@ -43,7 +43,8 @@ numpy==2.3.2
 pandas==2.3.1  
 psutil==5.9.0  
 scikit_learn==1.7.1  
-scipy==1.16.1  
+scipy==1.16.1
+awkward==2.8.5
 
 
 ## Instructions:
